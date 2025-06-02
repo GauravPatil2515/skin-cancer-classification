@@ -224,11 +224,39 @@ def git_setup_and_push():
     print("\nFollow these steps to complete the setup:")
     print("1. Create a new repository on GitHub (https://github.com/new)")
     print("2. Run the following commands to push your code:")
-    print("\n   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git")
+    print("\n   git remote add origin https://github.com/GauravPatil2515/skin-cancer-classification.git")
     print("   git branch -M main")
     print("   git push -u origin main")
     
-    print("\n💡 Replace YOUR_USERNAME and YOUR_REPO with your GitHub username and repository name")
+    print("\n💡 The commands are pre-configured for your GitHub profile (GauravPatil2515)")
+    
+    # Ask if user wants to push directly
+    try:
+        direct_push = input("\nWould you like to push directly to GitHub now? (y/n): ").strip().lower()
+        if direct_push == 'y':
+            repo_name = input("Enter repository name (default: skin-cancer-classification): ").strip()
+            if not repo_name:
+                repo_name = "skin-cancer-classification"
+            
+            # Set remote origin
+            remote_url = f"https://github.com/GauravPatil2515/{repo_name}.git"
+            success, _ = run_command(f'git remote add origin {remote_url}', "Setting GitHub remote")
+            if not success:
+                return False
+                
+            # Rename branch to main
+            run_command("git branch -M main", "Renaming current branch to main")
+            
+            # Push to GitHub
+            print(f"\nPushing to GitHub repository: {remote_url}")
+            success, _ = run_command("git push -u origin main", "Pushing to GitHub")
+            if success:
+                print(f"\n✅ Successfully pushed to GitHub: https://github.com/GauravPatil2515/{repo_name}")
+            else:
+                print("\n❌ Failed to push to GitHub. Please push manually using the commands above.")
+    except Exception as e:
+        print(f"\n⚠️ Error during direct push: {e}")
+        print("You can still push manually using the commands above.")
     
     return True
 
@@ -298,8 +326,14 @@ cancer-kaggle/
 def main():
     """Main function to run the GitHub setup process"""
     
-    print("🚀 GitHub Repository Setup")
+    print("🚀 GitHub Repository Setup for GauravPatil2515")
     print("=" * 50)
+    
+    # Check if repository name is provided as argument
+    repo_name = None
+    if len(sys.argv) > 1:
+        repo_name = sys.argv[1]
+        print(f"Repository name provided: {repo_name}")
     
     # Step 1: Run cleanup script if available
     if CLEANUP_AVAILABLE:
@@ -330,7 +364,7 @@ def main():
     git_setup_and_push()
     
     print("\n✅ GitHub setup complete!")
-    print("Run the script with Python to complete the setup and prepare for GitHub push")
+    print("You can now push to GitHub using your GauravPatil2515 account!")
 
 if __name__ == "__main__":
     main()
