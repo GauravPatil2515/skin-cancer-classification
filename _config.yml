@@ -1,0 +1,40 @@
+# GitHub Pages Configuration
+
+theme: jekyll-theme-cayman
+title: Professional Skin Cancer Classification Dashboard
+description: AI-powered skin cancer classification with deep learning models
+
+# Set baseurl to match your GitHub Pages URL
+baseurl: /skin-cancer-classification
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author:
+  name: Gaurav Patil
+  email: gaurav.patil2515@example.com
+  twitter: gauravpatil2515
+
+# Navigation links
+header_pages:
+  - index.html
+  - PROJECT_STRUCTURE.md
+  - ENHANCEMENT_SUMMARY.md
+  - README.md
+
+# Google Analytics
+google_analytics: UA-XXXXXXXXX-X
+
+# Exclude system files and folders
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - __pycache__
+  - assets/*.pth

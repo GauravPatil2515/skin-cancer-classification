@@ -229,6 +229,7 @@ def git_setup_and_push():
     print("   git push -u origin main")
     
     print("\n💡 The commands are pre-configured for your GitHub profile (GauravPatil2515)")
+    print("📄 GitHub Pages workflow has been set up to deploy automatically")
     
     # Ask if user wants to push directly
     try:
@@ -252,6 +253,16 @@ def git_setup_and_push():
             success, _ = run_command("git push -u origin main", "Pushing to GitHub")
             if success:
                 print(f"\n✅ Successfully pushed to GitHub: https://github.com/GauravPatil2515/{repo_name}")
+                print(f"🌐 GitHub Pages will be available at: https://gauravpatil2515.github.io/{repo_name}/")
+                
+                # Instructions for enabling GitHub Pages
+                print("\n📘 To enable GitHub Pages:")
+                print("1. Go to your repository settings on GitHub")
+                print("2. Navigate to 'Pages' in the sidebar")
+                print("3. Under 'Build and deployment', select:")
+                print("   - Source: 'GitHub Actions'")
+                print("4. Wait for the GitHub Action workflow to complete")
+                print("5. Your site will be published to GitHub Pages automatically")
             else:
                 print("\n❌ Failed to push to GitHub. Please push manually using the commands above.")
     except Exception as e:
