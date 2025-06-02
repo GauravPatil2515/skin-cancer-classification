@@ -1,0 +1,12 @@
+torch==2.7.0
+torchvision==0.22.0
+timm==1.0.15
+pillow==11.2.1
+streamlit
+matplotlib
+opencv-python
+groq
+reportlab
+pandas
+numpy
+python-dotenv

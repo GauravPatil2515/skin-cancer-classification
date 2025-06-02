@@ -1,0 +1,27 @@
+{
+  "author": "GauravPatil2515",
+  "project": "Skin Cancer Classification - Instant Download",
+  "created": "2025-05-30 21:03:45 UTC",
+  "download_method": "DIRECT_POPUP",
+  "models": [
+    "GAURAV_UltraLight_Model.pth",
+    "GAURAV_EfficientNet_Model.pth"
+  ],
+  "deployment_file": "GAURAV_DEPLOYMENT_CODE.py",
+  "classes": [
+    "Actinic keratoses",
+    "Basal cell carcinoma",
+    "Benign keratosis-like",
+    "Dermatofibroma",
+    "Melanoma",
+    "Melanocytic nevi",
+    "Vascular lesions"
+  ],
+  "instructions": [
+    "1. Download all files using popup links below",
+    "2. Keep all files in same folder",
+    "3. Install: pip install torch torchvision timm pillow",
+    "4. Run: python GAURAV_DEPLOYMENT_CODE.py",
+    "5. Use: predict_skin_cancer('model.pth', 'image.jpg')"
+  ]
+}
