@@ -21,8 +21,8 @@ author:
 # Navigation links
 header_pages:
   - index.html
+  - documentation.html
   - PROJECT_STRUCTURE.md
-  - ENHANCEMENT_SUMMARY.md
   - README.md
 
 # Google Analytics
