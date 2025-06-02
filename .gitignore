@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.env
+.venv
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ML specific
+# Uncomment if you want to exclude model files
+# *.pth
+# *.h5
+# *.model
+# *.onnx
+# *.pb
+# *.tflite
+
+# Reports and logs
+reports/
+logs/*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# OS specific
+.DS_Store
+Thumbs.db
